@@ -11,3 +11,7 @@ coverage
 
 # misc
 .env
+
+# expo
+.expo
+.expo-shared

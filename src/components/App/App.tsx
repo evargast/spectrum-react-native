@@ -1,6 +1,8 @@
-import { StatusBar } from "expo-status-bar";
+import { defaultTheme, Provider } from "@adobe/react-spectrum";
 import React, { FC } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
+
+import LandingPage from "../LandingPage";
 
 const styles = StyleSheet.create({
     container: {
@@ -13,10 +15,11 @@ const styles = StyleSheet.create({
 
 const App: FC = () => {
     return (
-        <View style={styles.container}>
-            <Text>Open up App.tsx to start working on your app!</Text>
-            <StatusBar style="auto" />
-        </View>
+        <Provider theme={defaultTheme}>
+            <View style={styles.container}>
+                <LandingPage />
+            </View>
+        </Provider>
     );
 };
 
